@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * CODNITIVE
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE_EULA.html.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.codnitive.com/en/terms-of-service-softwares/
+ * http://www.codnitive.com/fa/terms-of-service-softwares/
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future.
+ *
+ * @category   Codnitive
+ * @package    Codnitive_FreeShipping
+ * @author     Hassan Barza <support@codnitive.com>
+ * @copyright  Copyright (c) 2012 CODNITIVE Co. (http://www.codnitive.com)
+ * @license    http://www.codnitive.com/en/terms-of-service-softwares/ End User License Agreement (EULA 1.0)
+ */
+-->
+
+<config>
+    <modules>
+        <Codnitive_FreeShipping>
+            <version>1.0.00</version>
+            <title>Advanced Free Shipping</title>
+            <link><![CDATA[http://www.codnitive.com/]]></link>
+            <codPool>community</codPool>
+        </Codnitive_FreeShipping>
+    </modules>
+    <global>
+        <helpers>
+            <freeshipping>
+                <class>Codnitive_FreeShipping_Helper</class>
+            </freeshipping>
+        </helpers>
+        <models>
+            <freeshipping>
+                <class>Codnitive_FreeShipping_Model</class>
+            </freeshipping>
+            <shipping>
+                <rewrite>
+                    <carrier_freeshipping>Codnitive_FreeShipping_Model_Shipping_Carrier_Freeshipping</carrier_freeshipping>
+                </rewrite>
+            </shipping>
+        </models>
+    </global>
+	
+    <adminhtml>
+        <translate>
+            <modules>
+                <Codnitive_FreeShipping>
+                    <files>
+                        <default>Codnitive_FreeShipping.csv</default>
+                    </files>
+                </Codnitive_FreeShipping>
+            </modules>
+        </translate>
+    </adminhtml>
+	
+    <default>
+        <codnitiveshippingmethods>
+            <freeshipping>
+                <active>0</active>
+                <chkfrq>518400</chkfrq>
+                <frtrn>1</frtrn>
+            </freeshipping>
+        </codnitiveshippingmethods>
+    </default>
+</config>

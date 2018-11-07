@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CODNITIVE
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE_EULA.html.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.codnitive.com/en/terms-of-service-softwares/
+ * http://www.codnitive.com/fa/terms-of-service-softwares/
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future.
+ *
+ * @category   Codnitive
+ * @package    Codnitive_FreeShipping
+ * @author     Hassan Barza <support@codnitive.com>
+ * @copyright  Copyright (c) 2012 CODNITIVE Co. (http://www.codnitive.com)
+ * @license    http://www.codnitive.com/en/terms-of-service-softwares/ End User License Agreement (EULA 1.0)
+ */
+-->
+<config>
+    <menu>
+        <codall>          
+            <children>
+                <codnitiveshippingmethods trnslate="title">
+                    <title>Shipping Methods</title>
+                    <sort_order>600</sort_order>
+                    <children>
+                        <freeshipping trnslate="title" module="freeshipping">
+                            <title>Advanced Free Shipping</title>
+                            <sort_order>10</sort_order>
+                            <action>adminhtml/system_config/edit/section/codnitiveshippingmethods</action>
+                        </freeshipping>
+                    </children>
+                </codnitiveshippingmethods>
+            </children>
+        </codall>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <codall>
+                        <children>
+                            <codnitiveshippingmethods translate="title">
+                                <title>Shipping Methods</title>
+                                <sort_order>600</sort_order>
+                                <children>
+                                    <freeshipping translate="title" module="freeshipping">
+                                        <title>Advanced Free Shipping</title>
+                                        <sort_order>10</sort_order>
+                                    </freeshipping>
+                                </children>
+                            </codnitiveshippingmethods>
+                        </children>
+                    </codall>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <codnitiveshippingmethods>
+                                        <title>CODNITIVE Shipping Methods Section</title>
+                                    </codnitiveshippingmethods>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
